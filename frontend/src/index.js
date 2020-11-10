@@ -5,8 +5,8 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // My imports
-import allNotes from './components/allNotes/allNotes';
 import About from './components/about/about';
+import Note from './components/notes/notes'
 
 ReactDOM.render(
   <React.StrictMode>   
@@ -26,13 +26,13 @@ ReactDOM.render(
       <Switch>
         <div className="container">
           <Route exact path="/">
-            <allNotes/>
+            <Note/>
           </Route>
           <Route exact path="/about">
             <About/>
           </Route>
           <Route exact path="/note/:id">
-            Acá iría la nota con el id que yo le meta
+            
           </Route>
         </div>
       </Switch>
