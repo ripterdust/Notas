@@ -8,8 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    
+  <React.StrictMode>   
     <Router>
       <nav className="navbar navbar-dark bg-dark">
         <div className="container">
@@ -17,23 +16,24 @@ ReactDOM.render(
           <Link className="navbar-brand" to="/">Notas</Link>
           {/* Options */}
           <div className="nav-items">
-            <Link>Inicio</Link>
-            <Link>Acerca De</Link>
-
+            <Link to="/" className="text-white">Inicio</Link>
+            <Link to="/about" className="ml-3 text-white">Acerca De</Link>
           </div>
 
         </div>
       </nav>
       <Switch>
-        <Route exact path="/">
-          Hola
-        </Route>
-        <Route exact path="/tarjeta/:id">
-          ñasldkjf
-        </Route>
-        <Route exact path="/create">
-          Crear tarjeta
-        </Route>
+        <div className="container">
+          <Route exact path="/">
+            Hola
+          </Route>
+          <Route exact path="/tarjeta/:id">
+            ñasldkjf
+          </Route>
+          <Route exact path="/about">
+            Crear tarjeta
+          </Route>
+        </div>
       </Switch>
     </Router>
     
