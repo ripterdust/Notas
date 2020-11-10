@@ -2,13 +2,13 @@ import { Component } from 'react';
 import Axios from 'axios';
 
 class Note extends Component {
-    this.name = []
-    
-    get Notes(){
 
-    }
 
     render(){
+        Axios({
+            method: 'get',
+            url: 'localhost:8080/api/'
+        })
         return <div>hola</div>
     }
 }
