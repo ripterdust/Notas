@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-
+import {} from 'react-router-dom';
 import Navigation from './components/navigation/navigation';
 
 ReactDOM.render(
   <React.StrictMode>
    <Navigation/>
+   <Router>
+
+   </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
