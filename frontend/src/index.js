@@ -8,6 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/about/about';
 import Note from './components/notes/notes'
 
+// Settings
+document.title = 'Notas';
+
 ReactDOM.render(
   <React.StrictMode>   
     <Router>

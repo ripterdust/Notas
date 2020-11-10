@@ -1,15 +1,18 @@
-import { Component } from 'react';
-import Axios from 'axios';
+import { Component, useEffect } from 'react';
+
+const url = 'localhost:8080';
+
+const getNotes = async (apiLink) => {
+    const response = await fetch(apiLink);
+    console.log(response.statusText);
+}
+
 
 class Note extends Component {
-
-
+    
+   
     render(){
-        Axios({
-            method: 'get',
-            url: 'localhost:8080/api/'
-        })
-        return <div>hola</div>
+    return <div>{ url }</div>
     }
 }
 

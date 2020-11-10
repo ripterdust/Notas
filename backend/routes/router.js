@@ -3,7 +3,7 @@ const app = express();
 
 app
     .get('/', (req, res) => {
-         res.send('Esto va a pedir todas las notas');
+         res.send({titulo: 'hola', contenido: 'adiós'});
     })
     .get('/nota/:id', (req, res) => {
         res.send('Esto va a mostrar una sola nota.');

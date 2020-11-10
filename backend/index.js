@@ -13,11 +13,7 @@ app.use(morgan('tiny'));
 // Routes
 app.use('/api/', require('./routes/router'));
 
-app.get('/', (req, res) => {
-    res.send('hola');
-})
-
 app.get('*', (req, res) => {
-    res.send('404')
+    res.redirect('/api/')
 })
 app.listen(app.get('port'), () => console.log('Aplicación funcionando en el puerto %s', app.get('port')));
