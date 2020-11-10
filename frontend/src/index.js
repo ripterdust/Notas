@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // My imports
 import allNotes from './components/allNotes/allNotes';
+import About from './components/about/about';
 
 ReactDOM.render(
   <React.StrictMode>   
@@ -28,7 +29,10 @@ ReactDOM.render(
             <allNotes/>
           </Route>
           <Route exact path="/about">
-            Crear tarjeta
+            <About/>
+          </Route>
+          <Route exact path="/note/:id">
+            Acá iría la nota con el id que yo le meta
           </Route>
         </div>
       </Switch>
