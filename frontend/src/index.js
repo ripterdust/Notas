@@ -1,15 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import {} from 'react-router-dom';
-import Navigation from './components/navigation/navigation';
+import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// My imports
+
 
 ReactDOM.render(
   <React.StrictMode>
-   <Navigation/>
-   <Router>
+    
+    <Router>
+      <nav className="navbar navbar-dark bg-dark">
+        <div className="container">
+          {/* Title of navbar */}
+          <Link className="navbar-brand" to="/">Notas</Link>
+          {/* Options */}
+          <div className="nav-items">
+            <Link>Inicio</Link>
+            <Link>Acerca De</Link>
 
-   </Router>
+          </div>
+
+        </div>
+      </nav>
+      <Switch>
+        <Route exact path="/">
+          Hola
+        </Route>
+        <Route exact path="/tarjeta/:id">
+          ñasldkjf
+        </Route>
+        <Route exact path="/create">
+          Crear tarjeta
+        </Route>
+      </Switch>
+    </Router>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
