@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // My imports
-
+import allNotes from './components/allNotes/allNotes';
 
 ReactDOM.render(
   <React.StrictMode>   
@@ -25,10 +25,7 @@ ReactDOM.render(
       <Switch>
         <div className="container">
           <Route exact path="/">
-            Hola
-          </Route>
-          <Route exact path="/tarjeta/:id">
-            ñasldkjf
+            <allNotes/>
           </Route>
           <Route exact path="/about">
             Crear tarjeta
