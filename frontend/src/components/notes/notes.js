@@ -3,7 +3,7 @@ import Axios from 'axios';
 
 class Note extends Component {
     this.name = []
-    
+
     get Notes(){
 
     }
