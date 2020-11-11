@@ -6,7 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // My imports
 import About from './components/about/about';
-import Note from './components/notes/notes'
+import Notes from './components/notes/notes';
+// Settings
+document.title = 'Notas';
 
 ReactDOM.render(
   <React.StrictMode>   
@@ -26,7 +28,7 @@ ReactDOM.render(
       <Switch>
         <div className="container">
           <Route exact path="/">
-            <Note/>
+            <Notes/>
           </Route>
           <Route exact path="/about">
             <About/>

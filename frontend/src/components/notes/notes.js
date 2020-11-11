@@ -1,16 +1,29 @@
-import { Component } from 'react';
-import Axios from 'axios';
+import { useEffect, useState } from 'react';
 
-class Note extends Component {
-    this.name = []
-
-    get Notes(){
-
+const Notes = () => {
+    const url = 'https://rickandmortyapi.com/api/character';
+    const obtenerDatos = async () => {
+        const data = await fetch(url);
+        const usuarios = await data.json();
+        setEquipo(usuarios.results);
     }
 
-    render(){
-        return <div>hola</div>
-    }
+    const [equipo, setEquipo] = useState([]);
+   
+    useEffect(() => {
+        obtenerDatos();
+    }, []);
+
+    return (<div>
+                {
+                    equipo.map(elem => (
+                        <div className="card" key={elem.id}>
+                            {elem.name}
+                        </div>
+                    ))
+                }
+             </div>)
+
 }
 
-export default Note;
+export default Notes;
